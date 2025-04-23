@@ -46,10 +46,7 @@
   ];
 </script>
 
-<Seo
-  title="Eric Zhang"
-  description="Software engineer, researcher, and designer. Making meaningful systems and interfaces for people."
-/>
+<Seo title="Sohum Sukhatankar" description="Aura." />
 
 <p
   class="layout-md text-black text-xl leading-tight font-light mb-16"
@@ -62,21 +59,14 @@
 
 <div class="layout-md text-lg space-y-14">
   <div class="space-y-5">
-    <p>
-      I currently work at <a class="link" href="https://modal.com">Modal</a>, a
-      new cloud computing platform.
-    </p>
+    <p>I just like learning.</p>
+
+    <p>I hope to keep learning.</p>
 
     <p>
-      I hope to develop better <em>interactive software</em> for people to cultivate
-      and share ideas, and to meaningfully express what brings them joy.
-    </p>
-
-    <p>
-      Towards that goal, I am a generalist and care deeply about <em>systems</em
-      >, which form the fundamental building blocks of our applications; and
-      <em>interaction design</em>, how we use and live with computers that are
-      all around us.
+      Towards that goal, I am a generalist and care deeply about <em
+        >mathematics</em
+      >, because it's pretty cool.
     </p>
   </div>
 
