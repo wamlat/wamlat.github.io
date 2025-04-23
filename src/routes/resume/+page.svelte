@@ -43,7 +43,7 @@
   <Workplace
     title="placeholderington city"
     company="h"
-    url="h"
+    url="placeholder.com"
     dates="February 2022 – Current"
     location="New York, NY"
   >
