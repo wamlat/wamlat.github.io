@@ -1,35 +1,29 @@
 name: CI
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 permissions:
-  contents: write
-
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/setup-node@v2
         with:
           node-version: "18"
-
       - run: npm ci
-
       - run: npm run check
-
       - run: npm run lint
-
       - run: npm run build
-
-      - uses: JamesIves/github-pages-deploy-action@4.1.8
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v2
         with:
-          branch: gh-pages
-          folder: build
-          single-commit: true
+          path: build
