@@ -5,7 +5,7 @@
 
 <Seo
   title="Sohum Sukhatankar – Resume"
-  description="Software engineer, researcher, and designer. Making meaningful systems and interfaces for people."
+  description="I just like learning."
 />
 
 <section class="layout-md py-12">
