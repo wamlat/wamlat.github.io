@@ -3,10 +3,7 @@
   import Workplace from "./Workplace.svelte";
 </script>
 
-<Seo
-  title="Sohum Sukhatankar – Resume"
-  description="I just like learning."
-/>
+<Seo title="Sohum Sukhatankar – Resume" description="I just like learning." />
 
 <section class="layout-md py-12">
   <h2 class="heading2">Education</h2>
