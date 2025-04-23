@@ -5,25 +5,23 @@ on:
       - main
   workflow_dispatch:
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 jobs:
   build:
     name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: "18"
       - run: npm ci
       - run: npm run check
       - run: npm run lint
       - run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: build
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          force_orphan: true
