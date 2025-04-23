@@ -24,57 +24,15 @@
     <p class="byline">A.B. in Computer Science and Mathematics</p>
   </div>
 
-  <p>Graduated magna cum laude, with highest honors in field.</p>
-
   <h4 class="font-medium mt-4 mb-1">Teaching:</h4>
   <ul>
-    <li>
-      TF for CS 153 (Compilers), Fall 2021 —
-      <em>Certificate of Distinction in Teaching</em>
-    </li>
-    <li>
-      TA for
-      <a class="link" href="https://sgi.mit.edu/"
-        >Summer Geometry Institute (SGI)</a
-      >, Summer 2021
-    </li>
-    <li>
-      TF for CS 161 (Operating Systems), Spring 2021 —
-      <em>Certificate of Distinction in Teaching</em>
-    </li>
-    <li>TF for CS 182 (Artificial Intelligence), Fall 2020</li>
-    <li>
-      TF for CS 124 (Data Structures and Algorithms), Spring 2020 —
-      <em>Commendation for Extraordinary Teaching</em>
-    </li>
-  </ul>
-
-  <h4 class="font-medium mt-4 mb-1">Graduate-level technical coursework:</h4>
-  <ul>
-    <li>Advanced Computational Complexity (CS 221)</li>
-    <li>Random Processes and Algorithms (CS 223)</li>
-    <li>Computational Learning Theory (CS 228)</li>
-    <li>Advanced Computer Networks (CS 243)</li>
-    <li>Advanced Topics in PL/AI (CS 252r)</li>
-    <li>Advanced Topics in PL Design (CS 252r)</li>
-    <li>Systems Security (CS 263)</li>
-    <li>Distributed Systems Engineering (MIT 6.824)</li>
-    <li>Shape Analysis (MIT 6.838)</li>
-    <li>Robotic Manipulation (MIT 6.843)</li>
-    <li>Probability (Stat 210)</li>
-    <li>Statistical Inference (Stat 211)</li>
+    <li>the</li>
   </ul>
 
   <h4 class="font-medium mt-4 mb-1">Undergraduate technical coursework:</h4>
   <ul>
-    <li>Compilers (CS 153)</li>
-    <li>Operating Systems (CS 161)</li>
-    <li>Computer Graphics (MIT 6.837)</li>
-    <li>Nanotechnology Fabrication (MIT 6.2540)</li>
-    <li>Chaotic Dynamical Systems (Math 118r)</li>
-    <li>Number Fields (Math 129)</li>
-    <li>Differential Topology (Math 132)</li>
-    <li>Honors Abstract Algebra (Math 55a)</li>
+    <li>Multivariable Calculus (Math 21a)</li>
+    <li>Linear Algebra (Math 21b)</li>
     <li>Honors Real and Complex Analysis (Math 55b)</li>
   </ul>
 </section>
@@ -83,25 +41,17 @@
   <h2 class="heading2">Professional Experience</h2>
 
   <Workplace
-    title="Founding Engineer"
-    company="Modal Labs"
-    url="https://modal.com/"
+    title="placeholderington city"
+    company="h"
+    url="h"
     dates="February 2022 – Current"
     location="New York, NY"
   >
     <li>Founding team member (#4), currently leading Special Projects.</li>
+    <li>a</li>
     <li>
-      I was the principal engineer for Modal's container runtime, the
-      high-performance Rust systems that execute Modal functions. These systems
-      are very data-intensive and handle hardware differences across a cluster
-      that spans multiple clouds (100,000 CPUs and 5,000 GPUs), and with
-      dynamic, heterogeneous workloads from thousands of customers.
-    </li>
-    <li>
-      I also developed Modal's high-throughput content-addressed file system,
-      tiered cache over petabytes of data, a novel <a
-        class="link"
-        href="https://modal.com/blog/serverless-http">serverless HTTP stack</a
+      eeeeee <a class="link" href="https://modal.com/blog/serverless-http"
+        >serverless HTTP stack</a
       >, distributed
       <a class="link" href="https://modal.com/docs/guide/tunnels">TLS relays</a
       >, container sandboxing via
@@ -113,14 +63,9 @@
     <li>
       I started engineering work on the <a class="link" href="https://modal.com"
         >modal.com</a
-      > website. Most cloud platforms overlook interfaces and craft, but we don't,
-      since good design makes complex systems legible. I continue to advise on product
-      and frontend work.
+      > website.
     </li>
-    <li>
-      A lot of the decisions stuck: Rust and Svelte make up about half of the
-      codebase now.
-    </li>
+    <li>h</li>
   </Workplace>
 
   <Workplace
