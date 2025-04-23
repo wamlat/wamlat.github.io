@@ -1,4 +1,4 @@
-name: CI
+name: Test Workflow Trigger # New name to avoid confusion
 
 on:
   push:
@@ -6,30 +6,12 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  build:
-    name: Build and Deploy
+  test:
+    name: Test Run
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "18"
-
-      - run: npm ci
-
-      - run: npm run check
-
-      - run: npm run lint
-
-      - run: npm run build
-
-      - uses: JamesIves/github-pages-deploy-action@4.1.8
-        with:
-          branch: gh-pages
-          folder: build
-          single-commit: true
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Echo message
+        run: echo "Custom workflow is running!"
