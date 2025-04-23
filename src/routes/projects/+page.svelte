@@ -76,7 +76,7 @@
 
   <p class="text-lg">
     If you find something interesting,
-    <a class="link" href="mailto:ekzhang1@gmail.com?subject=Software%20Projects"
+    <a class="link" href="mailto:tosohum@gmail.com?subject=Software%20Projects"
       >let me know</a
     >!
   </p>
