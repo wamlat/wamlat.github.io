@@ -60,10 +60,7 @@
   let sortOrder: "date" | "stars" = "date";
 </script>
 
-<Seo
-  title="Sohum Sukhatankar – Projects"
-  description="I just like learning."
-/>
+<Seo title="Sohum Sukhatankar – Projects" description="I just like learning." />
 
 <section class="layout-md py-12">
   <h2 class="heading2">Open Source</h2>
