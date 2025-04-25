@@ -1,8 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
-
   import { onMount } from "svelte";
-  import { CalendarDays, Star } from "lucide-svelte";
+  import { CalendarDays } from "lucide-svelte";
 
   import Seo from "$lib/components/Seo.svelte";
   import Project from "./Project.svelte";
@@ -39,25 +38,7 @@
     }
   });
 
-  let stars: Record<string, number> | null = null;
-  onMount(async () => {
-    const resp = await fetch(
-      "https://api.github.com/users/ekzhang/repos?per_page=100"
-    );
-    const repos = await resp.json();
-    stars = {};
-    for (const obj of repos) {
-      stars[obj.full_name] = obj.stargazers_count;
-    }
-  });
-
-  $: projectsByStars = [...projectsByTitle].sort((a, b) => {
-    const starsA = stars?.[projects[a].repo] ?? 0;
-    const starsB = stars?.[projects[b].repo] ?? 0;
-    return starsB - starsA;
-  });
-
-  let sortOrder: "date" | "stars" = "date";
+  let sortOrder: "date" | "title" = "date";
 </script>
 
 <Seo title="Sohum Sukhatankar – Projects" description="I just like learning." />
@@ -104,18 +85,18 @@
       <CalendarDays size={18} strokeWidth={1.8} class="mr-1.5" /> by Date
     </button>
     <button
-      class:active={sortOrder === "stars"}
-      on:click={() => (sortOrder = "stars")}
+      class:active={sortOrder === "title"}
+      on:click={() => (sortOrder = "title")}
     >
-      <Star size={18} strokeWidth={1.8} class="mr-1.5" /> by Stars
+      by Title
     </button>
   </div>
 </div>
 
-{#each sortOrder === "date" ? projectsByDate : projectsByStars as id (id)}
+{#each sortOrder === "date" ? projectsByDate : projectsByTitle as id (id)}
   <section class="py-10" id={trimName(id)}>
     <div class="mx-auto max-w-[1152px] px-4 sm:px-6">
-      <Project data={projects[id]} {images} {stars} />
+      <Project data={projects[id]} {images} />
     </div>
   </section>
 {/each}
