@@ -1,8 +1,5 @@
 <script lang="ts">
-  import { Star } from "lucide-svelte";
-
   import Markdown from "$lib/components/Markdown.svelte";
-  import { formatTime } from "$lib/utils";
 
   type Project = {
     title: string;
@@ -18,30 +15,15 @@
 
   export let data: Project;
   export let images: Record<string, { default: string }>;
-  export let stars: Record<string, number> | null = null;
 </script>
 
 <!-- Title -->
 <h3 class="text-black text-xl font-semibold mb-2">
   <span class="mr-1">{data.title}</span>
-  <small class="whitespace-nowrap text-neutral-500 text-base font-normal">
-    {formatTime("%B %Y", data.date)}
-  </small>
 </h3>
 
-<!-- Stars and tags (pill bar) -->
+<!-- Tags (pill bar) -->
 <div class="flex flex-wrap mb-1">
-  <a
-    class="pill hover:!bg-neutral-200 transition-colors"
-    href="https://github.com/{data.repo}/stargazers"
-  >
-    <Star size={14} class="fill-current" />
-    {#if stars?.[data.repo] !== undefined}
-      <span class="ml-1">{stars[data.repo].toLocaleString()}</span>
-    {:else}
-      <span>&ZeroWidthSpace;</span>
-    {/if}
-  </a>
   {#each data.topics as tag}
     <div class="pill">{tag}</div>
   {/each}
