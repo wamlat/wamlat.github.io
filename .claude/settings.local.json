@@ -15,7 +15,11 @@
       "Read(//c/Users/tosoh/Downloads/**)",
       "WebFetch(domain:sukhatankar.com)",
       "Bash(gh repo list:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx serve:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
