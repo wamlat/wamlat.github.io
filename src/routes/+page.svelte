@@ -5,43 +5,9 @@
 
   const featuredProjects = [
     {
-      name: "sshx",
-      href: "/projects#sshx",
-      desc: "secure web-based, collaborative terminal",
-    },
-    {
-      name: "Bore",
-      href: "/projects#bore",
-      desc: "bypass your NAT in just 400 lines of code",
-      aside: "9500+ stars on GitHub",
-    },
-    {
-      name: "Percival",
-      href: "/projects#percival",
-      desc: "reactive notebooks for exploratory data analysis",
-    },
-    {
-      name: "Rustpad",
-      href: "/projects#rustpad",
-      desc: "self-hosted collaborative text editor",
-      aside: "6M+ downloads",
-    },
-    {
-      name: "Crepe",
-      href: "/projects#crepe",
-      desc: "compiled Datalog language in Rust",
-      aside: "used by distributed databases & security systems",
-    },
-    {
-      name: "FastSeg",
-      href: "/projects#fastseg",
-      desc: "real-time semantic segmentation for self-driving cars",
-    },
-    {
-      name: "Set with Friends",
-      href: "/projects#setwithfriends",
-      desc: "online multiplayer card game",
-      aside: "30M+ page views, 900K+ users",
+      name: "Poincaré map",
+      href: "/projects#poincare-map",
+      desc: "dynamical system modeler",
     },
   ];
 </script>
@@ -49,7 +15,7 @@
 <Seo title="Sohum Sukhatankar" description="Aura." />
 
 <p
-  class="layout-md text-black text-xl leading-tight font-light mb-16"
+  class="layout-md text-black dark:text-white text-xl leading-tight font-light mb-16"
   id="eric-is"
 >
   <span class="g">is a</span> software engineer<span class="g">,</span><br />
@@ -75,7 +41,7 @@
 
     {#each featuredProjects as project}
       <a class="project-pair" href={project.href}>
-        <div class="text-black font-medium">
+        <div class="text-black dark:text-white font-medium">
           {project.name}
           <ArrowUpRight size={18} class="inline text-neutral-400" />
         </div>
@@ -147,13 +113,6 @@
     <p>Other interests: math, physics, reading, photography, and biking.</p>
   </div>
 
-  <div class="space-y-5">
-    <!-- <p>This is what I look like:</p> -->
-    <img
-      alt="Self-portrait photograph of Eric Zhang at his desk"
-      src="/assets/images/profile5.jpg"
-    />
-  </div>
 </div>
 
 <style lang="postcss">
@@ -166,7 +125,7 @@
   }
 
   .project-pair {
-    @apply grid sm:grid-cols-[1fr,2fr] gap-y-1 -mx-3 px-3 py-2 hover:bg-neutral-100 transition-colors;
+    @apply grid sm:grid-cols-[1fr,2fr] gap-y-1 -mx-3 px-3 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors;
   }
 
   aside {

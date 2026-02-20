@@ -20,7 +20,7 @@
   }
 
   .heading2 {
-    @apply text-black text-xl font-semibold mb-4;
+    @apply text-black dark:text-white text-xl font-semibold mb-4;
   }
 }
 
@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  @apply /* antialiased */ py-12 sm:py-24 md:py-32 text-neutral-700;
+  @apply /* antialiased */ py-12 sm:py-24 md:py-32 text-neutral-700 dark:text-neutral-300 dark:bg-neutral-900;
 }
 
 ::selection {

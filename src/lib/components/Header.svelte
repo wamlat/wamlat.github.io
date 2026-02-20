@@ -23,7 +23,7 @@
   data-sveltekit-noscroll
   data-sveltekit-preload-code="eager"
 >
-  <h1 class="font-bold text-black text-2xl mb-6">
+  <h1 class="font-bold text-black dark:text-white text-2xl mb-6">
     <a href="/">Sohum Sukhatankar</a>
     {#if pageTitle}
       <span class="page-title">
@@ -36,8 +36,9 @@
     {#each links as link (link)}
       <a
         href={link.href}
-        class="hover:text-black transition-colors"
+        class="hover:text-black dark:hover:text-white transition-colors"
         class:text-black={$page.url.pathname === link.href}
+        class:dark:text-white={$page.url.pathname === link.href}
       >
         {link.name}
       </a>
