@@ -3,7 +3,12 @@
 
   import Seo from "$lib/components/Seo.svelte";
 
-  const featuredProjects = [
+  const featuredProjects: {
+    name: string;
+    href: string;
+    desc: string;
+    aside?: string;
+  }[] = [
     {
       name: "Poincaré map",
       href: "/projects#poincare-map",
