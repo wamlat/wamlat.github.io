@@ -1,4 +1,4 @@
-const API_URL = "https://poincare-api.onrender.com";
+const API_URL = "https://poincare-map-backend.onrender.com";
 
 const aSlider = document.getElementById("param-a");
 const bSlider = document.getElementById("param-b");
