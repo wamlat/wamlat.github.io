@@ -117,7 +117,6 @@
 
     <p>Other interests: math, physics, reading, photography, and biking.</p>
   </div>
-
 </div>
 
 <style lang="postcss">
