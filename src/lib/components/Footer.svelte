@@ -7,7 +7,9 @@
   <div class="row">
     <span>Email</span>
     <hr />
-    <span class="whitespace-nowrap">ssukhatankar [at] college [dot] harvard [dot] edu</span>
+    <span class="whitespace-nowrap"
+      >ssukhatankar [at] college [dot] harvard [dot] edu</span
+    >
   </div>
 </footer>
 

@@ -25,7 +25,7 @@
 >
   <span class="g">is a </span>learner<span class="g">,</span><br />
   researcher<span class="g">, and aspiring </span><br />
- mathematician<span class="g">.</span>
+  mathematician<span class="g">.</span>
 </p>
 
 <div class="layout-md text-lg space-y-14">
@@ -35,7 +35,10 @@
 
   <div class="space-y-5">
     <p>
-      I am currently a sophomore at Harvard, where I am studying mathematics, statistics, and computer science, with a possible minor in linguistics. In the past, I was a member of the WOLF (linguistic fieldwork) lab and wrote for the Crimson.
+      I am currently a sophomore at Harvard, where I am studying mathematics,
+      statistics, and computer science, with a possible minor in linguistics. In
+      the past, I was a member of the WOLF (linguistic fieldwork) lab and wrote
+      for the Crimson.
     </p>
 
     <p>Other interests: reading, running, cats, baking, and rhythm games.</p>

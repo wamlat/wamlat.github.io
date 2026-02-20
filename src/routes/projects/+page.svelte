@@ -47,10 +47,10 @@
   <h2 class="heading2">Open Source</h2>
 
   <p class="text-lg mb-4">
-    I like to build cool software projects and share them with the world. Doing lets me develop technical skills, explore new topics, and make
-    tools that improve people's lives.
+    I like to build cool software projects and share them with the world. Doing
+    lets me develop technical skills, explore new topics, and make tools that
+    improve people's lives.
   </p>
-
 
   <p class="text-lg">
     If you find something interesting,
