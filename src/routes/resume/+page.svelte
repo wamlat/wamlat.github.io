@@ -115,7 +115,7 @@ networks of Granger causality
   <div class="mb-4">
     <h3 class="font-medium mb-1">Mathematics:</h3>
     <ul>
-      <li><b>AIME</b> Qualified x2</li>
+      <li><b>AIME:</b> Qualified x2</li>
     </ul>
   </div>
 

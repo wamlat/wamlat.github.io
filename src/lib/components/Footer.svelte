@@ -7,7 +7,7 @@
   <div class="row">
     <span>Email</span>
     <hr />
-    <a class="link" href="mailto:tosohum@gmail.com">tosohum@gmail.com</a>
+    <span class="whitespace-nowrap">ssukhatankar [at] college [dot] harvard [dot] edu</span>
   </div>
 </footer>
 

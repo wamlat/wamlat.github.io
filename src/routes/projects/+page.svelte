@@ -47,19 +47,16 @@
   <h2 class="heading2">Open Source</h2>
 
   <p class="text-lg mb-4">
-    I view building software in the open as a mode of <em
-      class="font-serif text-[110%] leading-[100%]">creative exploration</em
-    >. It lets me quickly act on inspiration, delve into new topics, and make
+    I like to build cool software projects and share them with the world. Doing lets me develop technical skills, explore new topics, and make
     tools that improve people's lives.
   </p>
 
-  <p class="text-lg mb-4">You'll see that I particularly like learning.</p>
 
   <p class="text-lg">
     If you find something interesting,
     <a class="link" href="mailto:tosohum@gmail.com?subject=Software%20Projects"
       >let me know</a
-    >!
+    > :3
   </p>
 </section>
 
