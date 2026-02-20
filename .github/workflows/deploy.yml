@@ -16,11 +16,11 @@ jobs:
         with:
           node-version: "18"
       - run: npm ci
-      # Skip the lint step for now
-      # - run: npm run lint
+      - run: npm run lint
       - run: npm run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          force_orphan: true
