@@ -9,8 +9,8 @@ website: https://wamlat.github.io/poincare-map
 ---
 
 This project visualizes the chaotic behavior of the Rössler attractor using a
-**Poincaré section** at y = 0.  
-Each time the system's trajectory crosses the plane, we plot a point—revealing
-the hidden fractal geometry.
+**Poincaré section** at y = 0.
+Each time the system's trajectory crosses the plane, we plot a point, revealing
+a hidden fractal geometry.
 
 **Links: [Website](https://wamlat.github.io/poincare-map)**
