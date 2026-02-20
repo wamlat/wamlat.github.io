@@ -8,7 +8,14 @@
       "Bash(\"/c/Program Files/GitHub CLI/gh.exe\" api repos/wamlat/wamlat.github.io/pages)",
       "Bash(ls:*)",
       "Bash(xargs rm:*)",
-      "Bash(npm run lint:*)"
+      "Bash(npm run lint:*)",
+      "WebFetch(domain:wamlat.github.io)",
+      "Read(//c/Users/tosoh/Downloads//**)",
+      "Read(//c/Users/tosoh//**)",
+      "Read(//c/Users/tosoh/Downloads/**)",
+      "WebFetch(domain:sukhatankar.com)",
+      "Bash(gh repo list:*)",
+      "Bash(python3:*)"
     ]
   }
 }
