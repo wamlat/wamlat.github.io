@@ -44,39 +44,49 @@ document.querySelectorAll(".preset").forEach((btn) => {
 });
 
 // Chart setup
+const amber = "#c8a46e";
+const amberFaint = "rgba(200, 164, 110, 0.5)";
+const gridColor = "rgba(255, 255, 255, 0.04)";
+const tickColor = "#3a3a48";
+
 const ctx = document.getElementById("chart").getContext("2d");
 const chart = new Chart(ctx, {
   type: "scatter",
   data: {
     datasets: [
       {
-        label: "Poincaré Section",
+        label: "Poincare Section",
         data: [],
-        pointRadius: 2.5,
+        pointRadius: 1.8,
         pointHoverRadius: 5,
-        pointBackgroundColor: "#4a6cf7",
+        pointBackgroundColor: amber,
         pointBorderColor: "transparent",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: amber,
+        pointHoverBorderWidth: 2,
       },
     ],
   },
   options: {
     responsive: true,
     maintainAspectRatio: false,
-    animation: { duration: 400 },
+    animation: { duration: 500, easing: "easeOutQuart" },
     plugins: {
       legend: { display: false },
       tooltip: {
-        backgroundColor: "#1a1a2a",
-        titleColor: "#888",
-        bodyColor: "#e0e0e8",
-        borderColor: "#2a2a3a",
+        backgroundColor: "#0e0e14",
+        titleColor: "#5a5a6a",
+        bodyColor: "#c8c8d0",
+        borderColor: "#1a1a24",
         borderWidth: 1,
-        cornerRadius: 8,
+        cornerRadius: 6,
         padding: 10,
-        bodyFont: { family: "'SF Mono', 'Fira Code', monospace", size: 12 },
+        bodyFont: { family: "'JetBrains Mono', monospace", size: 11 },
+        displayColors: false,
         callbacks: {
+          title: () => "",
           label: (ctx) =>
-            `x: ${ctx.parsed.x.toFixed(4)}  z: ${ctx.parsed.y.toFixed(4)}`,
+            `x ${ctx.parsed.x.toFixed(4)}   z ${ctx.parsed.y.toFixed(4)}`,
         },
       },
     },
@@ -85,29 +95,41 @@ const chart = new Chart(ctx, {
         title: {
           display: true,
           text: "x",
-          color: "#555",
-          font: { style: "italic", family: "Georgia, serif" },
+          color: tickColor,
+          font: {
+            family: "'Cormorant Garamond', serif",
+            size: 16,
+            style: "italic",
+          },
+          padding: { top: 8 },
         },
-        grid: { color: "#1a1a25" },
+        grid: { color: gridColor, lineWidth: 1 },
         ticks: {
-          color: "#444",
-          font: { family: "'SF Mono', monospace", size: 11 },
+          color: tickColor,
+          font: { family: "'JetBrains Mono', monospace", size: 10 },
+          maxTicksLimit: 8,
         },
-        border: { color: "#1e1e2e" },
+        border: { color: "rgba(255, 255, 255, 0.06)" },
       },
       y: {
         title: {
           display: true,
           text: "z",
-          color: "#555",
-          font: { style: "italic", family: "Georgia, serif" },
+          color: tickColor,
+          font: {
+            family: "'Cormorant Garamond', serif",
+            size: 16,
+            style: "italic",
+          },
+          padding: { bottom: 8 },
         },
-        grid: { color: "#1a1a25" },
+        grid: { color: gridColor, lineWidth: 1 },
         ticks: {
-          color: "#444",
-          font: { family: "'SF Mono', monospace", size: 11 },
+          color: tickColor,
+          font: { family: "'JetBrains Mono', monospace", size: 10 },
+          maxTicksLimit: 8,
         },
-        border: { color: "#1e1e2e" },
+        border: { color: "rgba(255, 255, 255, 0.06)" },
       },
     },
   },
@@ -116,7 +138,6 @@ const chart = new Chart(ctx, {
 let abortController = null;
 
 async function updateChart() {
-  // Abort any in-flight request
   if (abortController) abortController.abort();
   abortController = new AbortController();
 
@@ -137,8 +158,6 @@ async function updateChart() {
 
     const data = await res.json();
 
-    // Handle new response format (object with points/diverged/count)
-    // and old format (raw array) for backwards compatibility
     let points, diverged, count;
     if (Array.isArray(data)) {
       points = data;
@@ -157,18 +176,18 @@ async function updateChart() {
 
     if (diverged) {
       warning.textContent =
-        "Trajectory diverged — the system is unstable for these parameters. Showing partial results.";
+        "Trajectory diverged \u2014 system unstable for these parameters. Showing partial results.";
       warning.classList.remove("hidden");
     } else if (count === 0) {
-      warning.textContent = "No Poincaré crossings found for these parameters.";
+      warning.textContent =
+        "No crossings detected for these parameters. Try adjusting c.";
       warning.classList.remove("hidden");
     }
   } catch (err) {
     if (err.name !== "AbortError") {
-      warning.textContent =
-        "Failed to reach the server. Is the backend running?";
+      warning.textContent = "Could not reach the server. Is the backend up?";
       warning.classList.remove("hidden");
-      pointCount.textContent = "—";
+      pointCount.textContent = "\u2014";
     }
   } finally {
     loading.classList.add("hidden");
