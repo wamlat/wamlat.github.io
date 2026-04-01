@@ -8,6 +8,9 @@ image: gametime.png
 website: https://gametime-tau.vercel.app/
 ---
 
-This project is a multi-game platform with topics spanning estimation, spatial reasoning, numerical logic, and verbal memory. Each game uses seed-based reproducibility for sharing with friends, and the whole thing is deployed on Vercel.
+This project is a multi-game platform with topics spanning estimation, spatial
+reasoning, numerical logic, and verbal memory. Each game uses seed-based
+reproducibility for sharing with friends, and the whole thing is deployed on
+Vercel.
 
 **Links: [Website](https://gametime-tau.vercel.app/)**
