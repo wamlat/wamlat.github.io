@@ -14,4 +14,5 @@ reasoning, numerical logic, and verbal memory. Each game uses seed-based
 reproducibility for sharing with friends, and the whole thing is deployed on
 Vercel.
 
-**Links: [Website](https://gametime-tau.vercel.app/) · [GitHub](https://github.com/wamlat/gametime/)**
+**Links: [Website](https://gametime-tau.vercel.app/) ·
+[GitHub](https://github.com/wamlat/gametime/)**
