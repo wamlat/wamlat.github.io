@@ -31,7 +31,7 @@
     <li>CS 120: Algorithms</li>
     <li>CS 1810: Machine Learning</li>
     <li>AM 226: [Graduate] Computational Neuroscience</li>
-    <li>MIT 18.337: Parallel Computing and Scientific ML</li>
+    <li>MIT 18.337: [Graduate] Parallel Computing and Scientific ML</li>
     <li>Math 21a: Multivariable Calculus</li>
     <li>Math 21b: Linear Algebra</li>
     <li>Math 55b: Honors Topology, Real Analysis, and Complex Analysis</li>
