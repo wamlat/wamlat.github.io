@@ -23,7 +23,7 @@
   data-sveltekit-noscroll
   data-sveltekit-preload-code="eager"
 >
-  <h1 class="font-bold text-black dark:text-white text-2xl mb-6">
+  <h1 class="font-bold text-black dark:text-white text-2xl">
     <a href="/">Sohum Sukhatankar</a>
     {#if pageTitle}
       <span class="page-title">
@@ -31,6 +31,7 @@
         {pageTitle}
       </span>
     {/if}
+    <span class="pronunciation">/ˈsoː.həm sukʰ.ˈʈəɳ.kəɾ/</span>
   </h1>
   <nav>
     {#each links as link (link)}
@@ -53,6 +54,10 @@
 
   .page-title {
     @apply font-light;
+  }
+
+  .pronunciation {
+    @apply block text-lg leading-tight font-normal text-neutral-400 dark:text-neutral-500;
   }
 
   @media (max-width: 580px) {
