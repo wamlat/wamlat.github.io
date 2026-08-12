@@ -94,7 +94,7 @@
 
   <Workplace
     title="Researcher"
-    company="Madsen lab, Boston Children's Hospital"
+    company="Boston Children's Hospital"
     url=""
     dates="January 2025 - May 2025"
     location="Boston, MA"

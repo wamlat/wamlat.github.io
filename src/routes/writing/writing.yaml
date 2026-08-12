@@ -1,12 +1,4 @@
 papers:
-  - title: Global Dynamics of the E. coli Transcriptional Regulatory Network
-    date: 2025-12-14
-    summary: >
-      Survey and theoretical synthesis of mathematical frameworks, including
-      structured RNN theory, vector-field decomposition, and topological data
-      analysis, to model the global dynamics of large gene regulatory networks.
-      Final project for AM 226: Theory of Neural Computation.
-    link: /assets/pdf/Global_Dynamics_Modeling.pdf
   - title: "You Reap What You Edit: Synthetic Gene Circuits in Plants"
     date: 2024-11-10
     summary: >
