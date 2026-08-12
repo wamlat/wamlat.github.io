@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poincaré Map — Rössler System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="app">
+      <header>
+        <div class="header-rule"></div>
+        <div class="header-content">
+          <h1>Poincaré Map</h1>
+          <p class="subtitle">
+            Rössler Attractor&ensp;&middot;&ensp;<em>y</em> = 0 cross-section
+          </p>
+        </div>
+        <div class="header-rule"></div>
+      </header>
+
+      <div class="layout">
+        <aside class="controls">
+          <div class="panel">
+            <div class="panel-label">Parameters</div>
+            <div class="control-group">
+              <div class="param">
+                <div class="param-header">
+                  <label for="param-a"><em>a</em></label>
+                  <input
+                    type="number"
+                    id="a-num"
+                    min="0.1"
+                    max="0.5"
+                    step="0.01"
+                    value="0.2"
+                    class="num-input"
+                  />
+                </div>
+                <div class="slider-track">
+                  <input
+                    type="range"
+                    id="param-a"
+                    min="0.1"
+                    max="0.5"
+                    step="0.01"
+                    value="0.2"
+                  />
+                </div>
+              </div>
+
+              <div class="param">
+                <div class="param-header">
+                  <label for="param-b"><em>b</em></label>
+                  <input
+                    type="number"
+                    id="b-num"
+                    min="0.1"
+                    max="0.5"
+                    step="0.01"
+                    value="0.2"
+                    class="num-input"
+                  />
+                </div>
+                <div class="slider-track">
+                  <input
+                    type="range"
+                    id="param-b"
+                    min="0.1"
+                    max="0.5"
+                    step="0.01"
+                    value="0.2"
+                  />
+                </div>
+              </div>
+
+              <div class="param">
+                <div class="param-header">
+                  <label for="param-c"><em>c</em></label>
+                  <input
+                    type="number"
+                    id="c-num"
+                    min="1.0"
+                    max="18.0"
+                    step="0.1"
+                    value="5.7"
+                    class="num-input"
+                  />
+                </div>
+                <div class="slider-track">
+                  <input
+                    type="range"
+                    id="param-c"
+                    min="1.0"
+                    max="18.0"
+                    step="0.1"
+                    value="5.7"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-label">Presets</div>
+            <div class="presets">
+              <button class="preset" data-a="0.2" data-b="0.2" data-c="5.7">
+                <span class="preset-name">Classic</span>
+                <span class="preset-vals">0.2, 0.2, 5.7</span>
+              </button>
+              <button class="preset" data-a="0.1" data-b="0.1" data-c="14.0">
+                <span class="preset-name">Spiral</span>
+                <span class="preset-vals">0.1, 0.1, 14</span>
+              </button>
+              <button class="preset" data-a="0.2" data-b="0.2" data-c="9.0">
+                <span class="preset-name">Funnel</span>
+                <span class="preset-vals">0.2, 0.2, 9</span>
+              </button>
+              <button class="preset" data-a="0.36" data-b="0.4" data-c="4.5">
+                <span class="preset-name">Band</span>
+                <span class="preset-vals">0.36, 0.4, 4.5</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="panel panel-status">
+            <div class="status-row">
+              <span class="status-label">Crossings</span>
+              <span id="point-count" class="status-value">&mdash;</span>
+            </div>
+            <div id="warning" class="warning hidden"></div>
+          </div>
+
+          <div class="equation">
+            <div class="panel-label">System</div>
+            <div class="eq-lines">
+              <span
+                ><em>x&#x0307;</em> = &minus;<em>y</em> &minus; <em>z</em></span
+              >
+              <span><em>y&#x0307;</em> = <em>x</em> + <em>a y</em></span>
+              <span
+                ><em>z&#x0307;</em> = <em>b</em> + <em>z</em>(<em>x</em> &minus;
+                <em>c</em>)</span
+              >
+            </div>
+          </div>
+        </aside>
+
+        <main class="chart-area">
+          <div class="chart-frame">
+            <div id="loading" class="loading hidden">
+              <div class="spinner"></div>
+              <span>Computing trajectory...</span>
+            </div>
+            <canvas id="chart"></canvas>
+          </div>
+          <div class="chart-caption">
+            Poincaré section &mdash; successive intersections of the trajectory
+            with the <em>y</em>&thinsp;=&thinsp;0 hyperplane
+          </div>
+        </main>
+      </div>
+
+      <footer>
+        <a href="/">sukhatankar.com</a>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
