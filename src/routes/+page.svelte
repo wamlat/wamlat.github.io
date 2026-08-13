@@ -35,7 +35,7 @@
 
   <div class="space-y-5">
     <p>
-      In summer 2026, I completed my sophomore year at Harvard, where I studied mathematics,
+      Earlier this year, I completed my sophomore year at Harvard, where I studied mathematics,
       statistics, and computer science. In
       the past, I was a member of the WOLF (linguistic fieldwork) lab and wrote
       for the Crimson. Currently, I am on leave working on my startup! 🤫
