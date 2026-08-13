@@ -35,10 +35,10 @@
 
   <div class="space-y-5">
     <p>
-      I am currently a sophomore at Harvard, where I am studying mathematics,
-      statistics, and computer science, with a possible minor in linguistics. In
+      In summer 2026, I completed my sophomore year at Harvard, where I studied mathematics,
+      statistics, and computer science. In
       the past, I was a member of the WOLF (linguistic fieldwork) lab and wrote
-      for the Crimson.
+      for the Crimson. Currently, I am on leave working on my startup! 🤫
     </p>
 
     <p>Other interests: reading, running, cats, baking, and rhythm games.</p>
